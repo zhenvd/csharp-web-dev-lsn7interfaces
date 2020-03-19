@@ -10,6 +10,7 @@ namespace IceCreamShop
 
         public Case()
         {
+            Cones = new List<Cone>();
             Cone cone1 = new Cone("Waffle", 1.25, new List<string> { "gluten" });
             Cone cone2 = new Cone("Sugar", 0.75, new List<string> { "gluten" });
             Cone cone3 = new Cone("Wafer", 0.50, new List<string> { "gluten" });
@@ -19,6 +20,7 @@ namespace IceCreamShop
             Cones.Add(cone3);
             Cones.Add(cone4);
 
+            Flavors = new List<Flavor>();
             Flavor flavor1 = new Flavor("Vanilla", 0.75, new List<string> { "dairy" });
             Flavor flavor2 = new Flavor("Chocolate", 0.75, new List<string> { "dairy" });
             Flavor flavor3 = new Flavor("Red Velvet", 0.85, new List<string> { "dairy", "red #5" });
