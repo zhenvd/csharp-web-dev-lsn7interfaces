@@ -41,6 +41,19 @@ namespace IceCreamShop
             {
                 Console.WriteLine($"{cost.Name}: ${cost.Cost}");
             }
+
+            AllergenComparer comparer2 = new AllergenComparer();
+            Console.WriteLine("\nBefore:\n");
+            foreach (Flavor allergen in availableFlavors)
+            {
+                Console.WriteLine($"{allergen.Name}");
+            }
+            availableFlavors.Sort(comparer2);
+            Console.WriteLine("\nAfter:\n");
+            foreach (Flavor allergen in availableFlavors)
+            {
+                Console.WriteLine($"{allergen.Name}");
+            }
             // TODO: Print the 'flavors' and 'cones' lists (in a clear manner) to verify the sorting.
         }
     }
