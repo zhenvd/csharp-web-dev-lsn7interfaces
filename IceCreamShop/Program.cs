@@ -29,7 +29,18 @@ namespace IceCreamShop
             // TODO: Use a Comparator class to sort the 'cones' array in increasing order by the 'cost'
             //  field.
 
-
+            ConeComparer comparer1 = new ConeComparer();
+            Console.WriteLine("Before:\n");
+            foreach (Cone cost in availableCones)
+            {
+                Console.WriteLine($"{cost.Name}: ${cost.Cost}");
+            }
+            availableCones.Sort(comparer1);
+            Console.WriteLine("\nAfter:\n");
+            foreach (Cone cost in availableCones)
+            {
+                Console.WriteLine($"{cost.Name}: ${cost.Cost}");
+            }
             // TODO: Print the 'flavors' and 'cones' lists (in a clear manner) to verify the sorting.
         }
     }
